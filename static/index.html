@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>ShareDB Counter</title>
+</head>
+<body>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sunday</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+<script src="scripts/bundle.js"></script>
+<script>
+  var table = document.getElementsByName('table')[0];
+  var year = 2019;
+  var monthIndex = 08;
+  var something = (new Date(year, monthIndex, -1)).getDate();
+  var daysInMonth = (new Date(year, monthIndex, 0)).getDate();
+  var firstDateOfMonth = (new Date(year, monthIndex)).getDate();
+  var dayOfWeek = (new Date(year, monthIndex, firstDateOfMonth)).getDay();
+
+  var SundayIndex = 0;
+  var MondayIndex = 1;
+  var TuesdayIndex = 2;
+  var WednesdayIndex = 3;
+  var ThursdayIndex = 4;
+  var FridayIndex = 5;
+  var SaturdayIndex = 6;
+
+  var isCalendarDisplayed = false;
+  var firstDateOfMonth = (new Date(year, monthIndex, 0)).getDay();
+  var dateIndex = 0;
+  var weekIndex = 0;
+  while(true){
+    isCalendarDisplayed = dateIndex >= daysInMonth;
+    if (isCalendarDisplayed){break;}
+    var row = table.rows[weekIndex+1] || table.insertRow(-1); //inserts row at last position
+    var dayOfWeek = (new Date(year, monthIndex, firstDate)).getDay();
+    //start creating table cells on Sunday
+    //if (dayOfWeek )
+    for (var dayOfWeekIndex=0; dayOfWeekIndex<daysInMonth; daysOfWeekIndex++){
+
+    }
+    var operandCell = row.getElementsByClassName('operand')[0] || row.insertCell(-1);
+    operandCell.className='operand';
+    operandCell.innerHTML = binaryInputArray[index]; 
+    dateIndex++;
+  }
+
+  /*
+  for (var i=0; i<daysInMonth; i++){
+    var row = table.rows[index+1] || table.insertRow(-1); //inserts row at last position
+    var operandCell = row.getElementsByClassName('operand')[0] || row.insertCell(-1);
+    operandCell.className='operand';
+    operandCell.innerHTML = binaryInputArray[index]; 
+  }
+  */
+</script>
