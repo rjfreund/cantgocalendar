@@ -20,7 +20,7 @@
   "homepage": "https://github.com/rjfreund/cantgocalendar#readme",
   "dependencies": {
     "@teamwork/websocket-json-stream": "^2.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "sharedb": "^1.0.0-beta.23",
     "ws": "^7.1.2"
   },
